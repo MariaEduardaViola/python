@@ -1,0 +1,31 @@
+#exemplo encapsulamento 
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.__idade = idade
+
+    def mostrar_idade(self):
+        return self.__idade
+
+
+pessoa1 = Pessoa("Ana", 16)
+
+print(pessoa1.nome)
+print(pessoa1.mostrar_idade())
+
+#exemplo polimorfismo 
+class Cachorro:
+    def emitir_som(self):
+        print("Au au!")
+
+
+class Gato:
+    def emitir_som(self):
+        print("Miau!")
+
+
+animal1 = Cachorro()
+animal2 = Gato()
+
+animal1.emitir_som()
+animal2.emitir_som()
