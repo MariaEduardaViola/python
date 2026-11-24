@@ -1,0 +1,55 @@
+
+#Comando try e except
+
+#Exemplo 1: Divisão por zero
+
+try:
+    numero = 10 / 0
+except ZeroDivisionError:
+    print("Não é possível dividir por zero!")
+
+
+#Tratando diferentes tipos de erros
+
+#Exemplo 2:
+
+try:
+    numero = int(input("Digite um número: "))
+    resultado = 10 / numero
+    print(resultado)
+
+except ValueError:
+    print("Digite apenas números!")
+
+except ZeroDivisionError:
+    print("Não é possível dividir por zero!")
+
+
+#Comando else
+
+#Exemplo 3:
+
+try:
+    numero = int(input("Digite um número: "))
+
+except ValueError:
+    print("Valor inválido!")
+
+else:
+    print("Número digitado:", numero)
+
+
+
+#Comando finally
+
+
+#Exemplo 4:
+
+try:
+    print("Executando programa")
+
+except:
+    print("Ocorreu um erro")
+
+finally:
+    print("Programa finalizado!")
